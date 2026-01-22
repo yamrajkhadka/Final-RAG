@@ -81,7 +81,7 @@ def inject_ultra_premium_css():
 def load_engine():
     bi_enc = SentenceTransformer("all-mpnet-base-v2")
     cross_enc = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-    client = Groq(api_key=os.environ.get("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", ""))
+    client = Groq(api_key="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")
     emb = np.load("final_legal_embeddings.npy")
     with open("final_legal_laws_metadata.json", "r", encoding="utf-8") as f:
         meta = json.load(f)
@@ -116,7 +116,6 @@ def main():
     with st.sidebar:
         st.markdown('<div class="sidebar-header"><div class="sidebar-logo">⚖️</div><div class="sidebar-title">LexNepal AI</div><div class="sidebar-tagline">Advanced Legal Intelligence</div></div>', unsafe_allow_html=True)
         
-        # PROJECT DESCRIPTION - NEW ADDITION
         st.markdown("""
         <div class="project-description">
             <div class="desc-title">📋 About This Project</div>
@@ -135,7 +134,7 @@ def main():
         """, unsafe_allow_html=True)
         
         st.markdown('<div class="architecture-section"><div class="architecture-title">🏗️ RAG Architecture</div></div>', unsafe_allow_html=True)
-        components = [("Retrieval Strategy", "Hybrid (Vector + Keyword)", "Dense search + section number boosting"), ("Vector Database", "FAISS L2 Index", "High-performance similarity search"), ("Embedding Model", "MPNet Base v2 (768D)", "State-of-the-art semantic encoding"), ("Reranking Engine", "Cross-Encoder MS-MARCO", "Precise relevance scoring"), ("LLM Backbone", "Llama 3.3 70B Versatile", "Advanced legal reasoning"), ("Pipeline Stages", "25 → 5 Candidates", "Multi-stage retrieval optimization")]
+        components = [("Retrieval Strategy", "Hybrid (Vector + Keyword)", "Dense search + section number boosting"), ("Vector Database", "FAISS L2 Index", "High-performance similarity search"), ("Embedding Model", "MPNet Base v2 (768D)", "State-of-the-art semantic encoding"), ("Reranking Engine", "Cross-Encoder MS-MARCO", "Precise relevance scoring"), ("LLM Backbone", "Llama 3.3 70B Versatile", "Advanced legal reasoning"), ("Pipeline Stages", "25 → 10 Candidates", "Multi-stage retrieval optimization")]
         for label, value, detail in components:
             st.markdown(f'<div class="tech-card"><div class="tech-label">{label}</div><div class="tech-value">{value}</div><div class="tech-detail">{detail}</div></div>', unsafe_allow_html=True)
         st.markdown("---")
