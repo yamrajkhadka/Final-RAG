@@ -81,7 +81,7 @@ def inject_ultra_premium_css():
 def load_engine():
     bi_enc = SentenceTransformer("all-mpnet-base-v2")
     cross_enc = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-    client = Groq(api_key="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")
+    client = Groq(api_key="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")
     emb = np.load("final_legal_embeddings.npy")
     with open("final_legal_laws_metadata.json", "r", encoding="utf-8") as f:
         meta = json.load(f)
