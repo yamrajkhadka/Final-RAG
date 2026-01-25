@@ -20,7 +20,7 @@ This project integrates **document retrieval, embeddings, LLMs, API deployment, 
 ## 💻 Demo & API Links
 | Platform                  | Link                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Streamlit Web UI**      | [Click Here](https://final-rag-fruf8qrgjnjdmfw8erwhpr.streamlit.app)                                               |
+| **Streamlit Web UI**      | [Click Here](https://20final-rag-jxu8qwyinezorrjfhssxjg.streamlit.app)                                               |
 | **Hugging Face API**      | [Click Here](https://huggingface.co/spaces/yamraj047/lexnepal-api)                                                 |
 | **Expo Mobile App Build** | [Click Here](https://expo.dev/accounts/yamraj047/projects/lexnepal-ai/builds/0bed6947-3db8-40d2-8b71-b206e399f597) |
 
